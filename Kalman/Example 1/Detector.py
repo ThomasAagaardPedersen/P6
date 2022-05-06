@@ -32,7 +32,7 @@ def detect(frame,debugMode):
     contours, _ = cv2.findContours(img_thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # Set the accepted minimum & maximum radius of a detected object
-    min_radius_thresh= 3
+    min_radius_thresh= 10
     max_radius_thresh= 300
 
     centers=[]

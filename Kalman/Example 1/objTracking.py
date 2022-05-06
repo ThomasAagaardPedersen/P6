@@ -67,6 +67,9 @@ def main():
             # Read frame
             #ret, frame = VideoCap.read()
             
+            result = model(color_image)
+            objs = result.pands().xyxy[0]
+            objs_name = objs.loc[objs['name'] == 'bottle']
             # Detect object
             centers = detect(color_image,debugMode)
 
